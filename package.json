@@ -6,10 +6,8 @@
   "scripts": {
     "build": "tsc"
   },
-  "dependencies": {
-    "playwright": "^1.54.2"
-  },
   "devDependencies": {
+    "@playwright/test": "^1.54.2",
     "typescript": "^5.5.3"
   },
   "private": true
