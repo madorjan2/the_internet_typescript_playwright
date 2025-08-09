@@ -11,3 +11,6 @@ yarn-error.log*
 .vscode/*
 /.idea/
 /test-results/
+/.eslintrc.json
+/.prettierrc.json
+/eslint.config.js

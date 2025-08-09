@@ -1,14 +1,14 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "rootDir": "./tests",
-    "outDir": "dist",
-    "types": ["node"],
-  },
-  "include": ["tests"]
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"rootDir": "./tests",
+		"outDir": "dist",
+		"types": ["node"]
+	},
+	"include": ["tests"]
 }
