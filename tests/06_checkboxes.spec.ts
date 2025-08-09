@@ -1,6 +1,6 @@
 import { test, expect, Page, Locator } from './fixtures/baseTest';
 
-test.describe('Add or remove element', () => {
+test.describe('Checkboxes', () => {
     test.use({testPath: 'checkboxes'});
 
     // I am going to create a new class for the checkboxes, it is entirely unnecessary, but I want to practice classes.
