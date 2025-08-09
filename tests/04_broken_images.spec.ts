@@ -17,6 +17,7 @@ test.describe('Broken Images', () => {
             const is_broken: boolean = await page.evaluate(
                 (selector: string) :boolean => {
                     const img = document.evaluate(selector, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                    // @ts-ignore
                     return img ? img.naturalWidth === 0 : true;
                 },
                 xpath_selector
