@@ -17,6 +17,4 @@ test.describe('Context Menus', () => {
         await page.locator('#hot-spot').click({button: 'right'});
         expect(alertText).toBe('You selected a context menu');
     })
-
-
 });
