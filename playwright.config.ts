@@ -5,12 +5,12 @@ export default defineConfig({
     timeout: 30000,
     use: {
         baseURL: 'http://localhost:7080/',
-        headless: false,
-        viewport: null, // { width: 1280, height: 720 },
+        headless: !!process.env.CI,
+        viewport:  process.env.CI ? { width: 1920, height: 1080 } : null,
         screenshot: 'only-on-failure',
         launchOptions: {
-            slowMo: 1000,
-            args: ['--start-maximized'],
+            slowMo: process.env.CI ? 0 : 1000,
+            args: process.env.CI ? [] : ['--start-maximized'],
         }
     },
     reporter: 'list',
