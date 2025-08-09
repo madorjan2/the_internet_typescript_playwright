@@ -1,4 +1,4 @@
-import { test, expect} from './fixtures/baseTest';
+import { test, expect } from './fixtures/baseTest';
 
 test.describe('Context Menus', () => {
     test.use({testPath: 'context_menu'});
