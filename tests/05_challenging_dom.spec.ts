@@ -1,8 +1,7 @@
-import {expect, test, Locator, Page} from './fixtures/baseTest';
+import {expect, test, Locator, Page, ElementHandle} from './fixtures/baseTest';
 import {readFileSync} from "fs";
 import {join} from "path";
 import Tesseract from 'tesseract.js';
-import {ElementHandle} from "@playwright/test";
 
 test.describe('Challenging DOM', () => {
     test.use({

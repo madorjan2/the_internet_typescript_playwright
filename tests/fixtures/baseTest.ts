@@ -24,4 +24,4 @@ export const test = base.extend<CustomFixtures>({
     }
 })
 
-export { expect, Page, Locator } from '@playwright/test';
+export * from '@playwright/test';
