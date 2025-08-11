@@ -1,4 +1,4 @@
-import {defineConfig, devices} from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 	testDir: './tests',
@@ -20,15 +20,15 @@ export default defineConfig({
 		},
 		...(process.env.CI
 			? [
-				{
-					name: 'firefox',
-					use: { ...devices['Desktop Firefox'] },
-				},
-				{
-					name: 'webkit',
-					use: { ...devices['Desktop Safari'] },
-				},
-			]
+					{
+						name: 'firefox',
+						use: { ...devices['Desktop Firefox'] },
+					},
+					{
+						name: 'webkit',
+						use: { ...devices['Desktop Safari'] },
+					},
+				]
 			: []),
 	],
 	reporter: 'list',
