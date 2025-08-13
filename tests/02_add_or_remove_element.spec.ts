@@ -3,11 +3,11 @@ import { test, expect, Page } from './fixtures/baseTest';
 test.describe('Add or remove element', () => {
 	test.use({ testPath: 'add_remove_elements/' });
 
-	async function addElement(page: Page) {
+	async function addElement(page: Page): Promise<void> {
 		await page.getByRole('button', { name: 'Add Element' }).click();
 	}
 
-	async function clickFirstDeleteButton(page: Page) {
+	async function clickFirstDeleteButton(page: Page): Promise<void> {
 		await page.getByRole('button', { name: 'Delete' }).first().click();
 	}
 
