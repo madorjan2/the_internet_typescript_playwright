@@ -1,4 +1,4 @@
-import { test, expect, Locator } from './fixtures/baseTest';
+import { test, expect, Page, Locator } from './fixtures/baseTest';
 
 test.describe('Dynamic Content', () => {
 	test.use({ testPath: 'dynamic_content' });
