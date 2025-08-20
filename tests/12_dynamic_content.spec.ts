@@ -32,12 +32,12 @@ test.describe('Dynamic Content', () => {
 			for (const image of currentImages) {
 				const src: string | null = await image.getAttribute('src');
 				expect(src).not.toBeNull();
-				temp_images.push(src);
+				temp_images.push(src!);
 			}
 			for (const description of currentDescriptions) {
 				const desc: string | null = await description.textContent();
 				expect(desc).not.toBeNull();
-				temp_descriptions.push(desc);
+				temp_descriptions.push(desc!);
 			}
 			images.push(temp_images);
 			descriptions.push(temp_descriptions);
