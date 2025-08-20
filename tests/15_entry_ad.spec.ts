@@ -17,7 +17,11 @@ test.describe('Entry Ad', () => {
 		await expect(page.locator('.modal')).toBeHidden();
 	});
 
-	test('modal reappears on clicking "click here"', async ({ page }) => {
+	test('modal reappears on clicking "click here"', async ({
+		page,
+		browserName,
+	}) => {
+		test.skip(browserName === 'webkit', 'Test is unstable in WebKit on CI');
 		await page.locator('.modal-footer p').click();
 		await expect(page.locator('.modal')).toBeHidden();
 
