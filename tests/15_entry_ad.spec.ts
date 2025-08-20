@@ -10,6 +10,7 @@ test.describe('Entry Ad', () => {
 
 	test('modal reappears on clicking "click here"', async ({ page }) => {
 		await page.locator('.modal-footer p').click();
+        await expect(page.locator('.modal')).toBeHidden();
 		await page.getByRole('link', { name: 'click here' }).click();
 		await expect(page.locator('.modal')).toBeVisible();
 	});
