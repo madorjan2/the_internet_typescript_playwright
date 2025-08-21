@@ -28,7 +28,8 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('scroll down via mouse wheel', async ({ page }) => {
-		await page.mouse.wheel(0, 500);
+		await page.focus('body');
+        await page.mouse.wheel(0, 500);
 		const scrolledDown = await isScrolledDown(page);
 		expect(scrolledDown).toBe(true);
 		const allVisible = await areElementsVisible(page);
@@ -46,7 +47,7 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('javascript scroll by', async ({ page }) => {
-		page.evaluate(() => {
+		await page.evaluate(() => {
 			window.scrollBy(0, 500);
 		});
 		const scrolledDown = await isScrolledDown(page);
@@ -56,7 +57,7 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('javascript scroll to', async ({ page }) => {
-		page.evaluate(() => {
+		await page.evaluate(() => {
 			window.scrollTo(0, 500);
 		});
 		const scrolledDown = await isScrolledDown(page);
@@ -80,7 +81,8 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('page down key', async ({ page }) => {
-		await page.press('body', 'PageDown');
+		await page.focus('body')
+        await page.press('body', 'PageDown');
 		const scrolledDown = await isScrolledDown(page);
 		expect(scrolledDown).toBe(true);
 		const allVisible = await areElementsVisible(page);

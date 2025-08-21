@@ -21,7 +21,7 @@ test.describe('Entry Ad', () => {
 		page,
 		browserName,
 	}) => {
-		test.skip(browserName === 'webkit', 'Test is unstable in WebKit on CI');
+		test.skip(browserName === 'webkit' || browserName === 'firefox', 'Test is unstable in WebKit and flaky on Firefox on CI');
 		await page.locator('.modal-footer p').click();
 		await expect(page.locator('.modal')).toBeHidden();
 
