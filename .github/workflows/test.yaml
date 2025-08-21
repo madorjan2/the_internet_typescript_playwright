@@ -33,7 +33,11 @@ jobs:
             ${{ runner.os }}-playwright-
 
       - name: Install Playwright browsers
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps
+
+      - name: Install Playwright system dependencies for webkit
+        run: npx playwright install-deps webkit
 
       - name: Running Docker container
         run: |
