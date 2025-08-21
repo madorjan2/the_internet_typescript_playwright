@@ -80,7 +80,7 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('page down key', async ({ page }) => {
-		await page.keyboard.press('PageDown');
+		await page.press('body', 'PageDown');
 		const scrolledDown = await isScrolledDown(page);
 		expect(scrolledDown).toBe(true);
 		const allVisible = await areElementsVisible(page);
