@@ -7,12 +7,10 @@ test.describe('Geolocation', () => {
 
 	test('geolocation shows correct data', async ({ page }) => {
 		await page.context().grantPermissions(['geolocation']);
-		await page
-			.context()
-			.setGeolocation({
-				latitude: testData.lat,
-				longitude: testData.lon,
-			});
+		await page.context().setGeolocation({
+			latitude: testData.lat,
+			longitude: testData.lon,
+		});
 		await page.getByRole('button', { name: 'Where am I?' }).click();
 		await expect(page.locator('#lat-value')).toContainText(
 			testData.lat.toString(),
