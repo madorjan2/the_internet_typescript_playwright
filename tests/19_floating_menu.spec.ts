@@ -28,9 +28,12 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('scroll down via mouse wheel', async ({ page }) => {
-		test.skip(!!process.env.CI, 'This does not work in CI or is very flaky')
-        await page.focus('body');
-        await page.mouse.wheel(0, 500);
+		test.skip(
+			!!process.env.CI,
+			'This does not work in CI or is very flaky',
+		);
+		await page.focus('body');
+		await page.mouse.wheel(0, 500);
 		const scrolledDown = await isScrolledDown(page);
 		expect(scrolledDown).toBe(true);
 		const allVisible = await areElementsVisible(page);
@@ -82,9 +85,12 @@ test.describe('Floating Menu', () => {
 	});
 
 	test('page down key', async ({ page }) => {
-        test.skip(!!process.env.CI, 'This does not work in CI or is very flaky')
-		await page.focus('body')
-        await page.press('body', 'PageDown');
+		test.skip(
+			!!process.env.CI,
+			'This does not work in CI or is very flaky',
+		);
+		await page.focus('body');
+		await page.press('body', 'PageDown');
 		const scrolledDown = await isScrolledDown(page);
 		expect(scrolledDown).toBe(true);
 		const allVisible = await areElementsVisible(page);

@@ -13,8 +13,8 @@ test.describe('Challenging DOM', () => {
 	test.use({
 		testPath: 'challenging_dom',
 	});
-    // Since tesseract.js sometimes produces incorrect results, we retry the tests 3 times.
-    test.describe.configure({ retries: 3 })
+	// Since tesseract.js sometimes produces incorrect results, we retry the tests 3 times.
+	test.describe.configure({ retries: 3 });
 
 	const readExpected = (): string[][] => {
 		const path: string = join(__dirname, '/test_data/test_5.csv');
