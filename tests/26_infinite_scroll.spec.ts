@@ -3,12 +3,12 @@ import { test, expect, Locator, Page } from './fixtures/baseTest';
 test.describe('Infinite Scroll', () => {
 	test.use({ testPath: 'infinite_scroll' });
 
-    test.describe.configure({ retries: 3 });
+	test.describe.configure({ retries: 3 });
 
 	const numberOfScrolls: number = 10;
 	const timeout: number = 5000;
 
-	const getNumberOfParagraphs = async (page: Page) => {
+	const getNumberOfParagraphs = async (page: Page): Promise<number> => {
 		const paragraphs: Locator[] = await page
 			.locator('.jscroll-added')
 			.all();
