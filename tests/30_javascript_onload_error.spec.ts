@@ -5,7 +5,7 @@ test.describe('Javascript onLoad error', () => {
 
 	test.describe.configure({ retries: 3 });
 
-	test('should recieve error message', async ({ page, errors }) => {
+	test('should receive error message', async ({ page, errors }) => {
 		expect(errors.length).toBeGreaterThan(0);
 	});
 });
