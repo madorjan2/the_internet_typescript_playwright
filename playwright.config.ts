@@ -9,7 +9,7 @@ export default defineConfig({
 		viewport: process.env.CI ? { width: 1920, height: 1080 } : null,
 		screenshot: 'only-on-failure',
 		launchOptions: {
-			slowMo: process.env.CI ? 0 : 1000,
+			slowMo: process.env.CI ? 0 : 100,
 			args: process.env.CI ? [] : ['--start-maximized'],
 		},
 	},
