@@ -15,14 +15,14 @@ export default defineConfig({
 	},
 	projects: [
 		{
-			name: 'chromium',
-			use: { ...devices['Desktop Chrome'] },
+			name: 'firefox',
+			use: { ...devices['Desktop Firefox'] },
 		},
 		...(process.env.CI
 			? [
 					{
-						name: 'firefox',
-						use: { ...devices['Desktop Firefox'] },
+						name: 'chromium',
+						use: { ...devices['Desktop Chrome'] },
 					},
 					{
 						name: 'webkit',
